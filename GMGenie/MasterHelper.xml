@@ -1,0 +1,288 @@
+<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.blizzard.com/wow/ui/  http://wowprogramming.com/FrameXML/UI.xsd" xmlns="http://www.blizzard.com/wow/ui/">
+	<Button name="GMGenie_MasterHelper_Main" inherits="GMGenie_Window" hidden="true">
+		<Size>
+			<AbsDimension x="193" y="283" />
+		</Size>
+		<Anchors>
+			<Anchor point="LEFT" x="420" y="145" />
+		</Anchors>
+		<Frames>
+			<Button name="GMGenie_Mast2erHelper_Main_T1melee" inherits="GMGenie_Button" text="T1 Melee">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="3" y="-18" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MeleeT1();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T1Spell" inherits="GMGenie_Button" text="T1 Spell">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-18" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						SpellT1();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T2Melee" inherits="GMGenie_Button" text="T2 Melee">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="3" y="-42" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MeleeT2()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T2Spell" inherits="GMGenie_Button" text="T2 Spell">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-42" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						SpellT2()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T3Melee" inherits="GMGenie_Button" text="T3 Melee">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="3" y="-66" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MeleeT3()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T3Spell" inherits="GMGenie_Button" text="T3 Spell">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-66" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						SpellT3()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T4Melee" inherits="GMGenie_Button" text="T4 Melee">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="3" y="-90" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MeleeT4()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T4Spell" inherits="GMGenie_Button" text="T4 Spell">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-90" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						SpellT4()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T5Melee" inherits="GMGenie_Button" text="T5 Melee">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="3" y="-114" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						MeleeT5()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T5Spell" inherits="GMGenie_Button" text="T5 Spell">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-114" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						SpellT5()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T1Weapons" inherits="GMGenie_Button" text="T1 Weapons">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="3" y="-156" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						WeaponT1()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T2weapons" inherits="GMGenie_Button" text="T2 Weapons">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="3" y="-180" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						WeaponT2()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T3Weapons" inherits="GMGenie_Button" text="T3 weapons">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="3" y="-204" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						WeaponT3()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_T4Weapons" inherits="GMGenie_Button" text="T4 Weapons">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="3" y="-228" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						WeaponT4()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_OnPoint" inherits="GMGenie_Button" text="OnPoint">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-156" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						OnPoint()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_BuffMe" inherits="GMGenie_Button" text="Buff Me">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-180" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						BuffMe()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="GMGenie_MasterHelper_Main_Gems" inherits="GMGenie_Button" text="Gems">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-204" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+											GMGenie.Gems.toggle();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="notuse2" inherits="GMGenie_Button" text="-----">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-228" />
+				</Anchors>
+			</Button>
+			<Button name="T5_WEAPONS" inherits="GMGenie_Button" text="T5 Weapons">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="3" y="-252" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						WeaponT5()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="notuse1" inherits="GMGenie_Button" text="-----">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-252" />
+				</Anchors>
+			</Button>
+			<Frame>
+				<Size x="178" y="15" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-135" />
+				</Anchors>
+				<Backdrop bgFile="" edgeFile="" />
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString inherits="GenieFontNormalSmall" text="Weapons / Misc">
+							<Size x="133" y="10" />
+							<Anchors>
+								<Anchor point="TOPLEFT" x="25" y="-5" />
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+			</Frame>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				                GMGenie.loadWindow(self, 'Master Helper', false, nil);
+			</OnLoad>
+			<OnDoubleClick>
+				                self:ClearAllPoints();
+				                self:SetPoint("LEFT");
+			</OnDoubleClick>
+		</Scripts>
+	</Button>
+</Ui>

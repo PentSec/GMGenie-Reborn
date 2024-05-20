@@ -1,0 +1,200 @@
+<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.blizzard.com/wow/ui/  http://wowprogramming.com/FrameXML/UI.xsd" xmlns="http://www.blizzard.com/wow/ui/">
+	<Button name="GMGenie_Gems_Main" inherits="GMGenie_Window" hidden="true">
+		<Size>
+			<AbsDimension x="120" y="283" />
+		</Size>
+		<Anchors>
+			<Anchor point="LEFT" x="263" y="140" />
+		</Anchors>
+		<Frames>
+			<Frame>
+				<Size x="114" y="36" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-16" />
+				</Anchors>
+				<Backdrop bgFile="" edgeFile="" />
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString inherits="GenieFontNormalSmall" text="Enter Amount">
+							<Size x="80" y="12" />
+							<Anchors>
+								<Anchor point="TOPLEFT" x="19" y="-4" />
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Frames> 
+					<EditBox name="GemsAmmount" inherits="GMGenie_Input_Text" enableMouse="true">
+						<Size x="80" y="17" />
+						<Anchors>
+							<Anchor point="TOPLEFT" x="19" y="-19" />
+						</Anchors>
+					</EditBox>
+				</Frames>
+			</Frame>
+			<Button name="Gstrength" inherits="GMGenie_Button" text="+60 Strength">
+				<Size x="114" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-58" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AddGem("Strenght")
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="LEFT">
+					<Color r="1" g="0" b="0" />
+				</ButtonText>
+			</Button>
+			<Button name="60attackpower" inherits="GMGenie_Button" text="+60 Attack Power">
+				<Size x="114" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-76" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AddGem("AttackPower")
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="LEFT">
+					<Color r="1" g="0" b="0" />
+				</ButtonText>
+			</Button>
+			<Button name="60agility" inherits="GMGenie_Button" text="+60 Agility">
+				<Size x="114" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-94" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AddGem("Agility")
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="LEFT">
+					<Color r="1" g="0" b="0" />
+				</ButtonText>
+			</Button>
+			<Button name="70SpellPower" inherits="GMGenie_Button" text="+70 Spell Power">
+				<Size x="114" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-112" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AddGem("Spellp")
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="LEFT">
+					<Color r="1" g="0" b="0" />
+				</ButtonText>
+			</Button>
+			<Button name="90stamina" inherits="GMGenie_Button" text="+90 Stamina">
+				<Size x="114" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-130" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AddGem("Stamina")
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="LEFT">
+					<Color r="0.0" g="1.0" b="1.0" a="1.0" />
+				</ButtonText>
+			</Button>
+			<Button name="60resilience" inherits="GMGenie_Button" text="+60 Resilience">
+				<Size x="114" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-148" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AddGem("Resilience")
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="LEFT">
+					<Color r="1" g="1" b="0" />
+				</ButtonText>
+			</Button>
+			<Button name="25hasterating" inherits="GMGenie_Button" text="+25 Haste Rating">
+				<Size x="114" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-166" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AddGem("Haste")
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="LEFT">
+					<Color r="1" g="1" b="0" />
+				</ButtonText>
+			</Button>
+			<Button name="60hitrating" inherits="GMGenie_Button" text="+60 Hit Rating">
+				<Size x="114" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-184" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AddGem("Hit")
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="LEFT">
+					<Color r="1" g="1" b="0" />
+				</ButtonText>
+			</Button>
+			<Button name="deletedallgems" inherits="GMGenie_Button" text="DELETED ALL GEMS">
+				<Size x="114" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-258" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						DelGemsBags()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="60criticalstrike" inherits="GMGenie_Button" text="+60 Critical Strike">
+				<Size x="114" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-202" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AddGem("Critical")
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="LEFT">
+					<Color r="1" g="1" b="0" />
+				</ButtonText>
+			</Button>
+			<Button name="20hast40sta" inherits="GMGenie_Button" text="+20Haste +40stamina">
+				<Size x="114" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-220" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AddGem("HasteStamina")
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="LEFT">
+					<Color r="0" g="0.5" b="0" />
+				</ButtonText>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				                GMGenie.loadWindow(self, 'Gems', false, nil);
+			</OnLoad>
+			<OnDoubleClick>
+				                self:ClearAllPoints();
+				                self:SetPoint("LEFT");
+			</OnDoubleClick>
+			<OnClick>
+				GMGenie_Gems_Main_OnClick()
+			</OnClick>
+		</Scripts>
+	</Button>
+</Ui>
