@@ -16,7 +16,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						MeleeT1();
+						AddTier("MeleeT1")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -29,7 +29,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						SpellT1();
+						AddTier("SpellT1")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -42,7 +42,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						MeleeT2()
+						AddTier("MeleeT2")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -55,7 +55,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						SpellT2()
+						AddTier("SpellT2")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -68,7 +68,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						MeleeT3()
+						AddTier("MeleeT3")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -81,7 +81,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						SpellT3()
+						AddTier("SpellT3")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -94,7 +94,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						MeleeT4()
+						AddTier("MeleeT4")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -107,7 +107,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						SpellT4()
+						AddTier("SpellT4")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -120,7 +120,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						MeleeT5()
+						AddTier("MeleeT5")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -133,7 +133,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						SpellT5()
+						AddTier("SpellT5")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -146,7 +146,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						WeaponT1()
+						AddTier("WeaponT1")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -159,7 +159,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						WeaponT2()
+						AddTier("WeaponT2")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -172,7 +172,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						WeaponT3()
+						AddTier("WeaponT3")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -185,7 +185,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						WeaponT4()
+						AddTier("WeaponT4")
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -245,7 +245,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						WeaponT5()
+						AddTier("WeaponT5")
 					</OnClick>
 				</Scripts>
 			</Button>

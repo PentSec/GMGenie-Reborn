@@ -1,12 +1,11 @@
---This file is part of Game Master Genie.
---Copyright 2011-2014 Chocochaos
-
---Game Master Genie is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
---Game Master Genie is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
---You should have received a copy of the GNU General Public License along with Game Master Genie. If not, see <http://www.gnu.org/licenses/>.
-
+-- This file is part of Game Master Genie.
+-- Copyright 2011-2014 Chocochaos
+-- Game Master Genie is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
+-- Game Master Genie is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+-- You should have received a copy of the GNU General Public License along with Game Master Genie. If not, see <http://www.gnu.org/licenses/>.
 GMGenie.Hud = {};
 
+-- URL del archivo de versión en GitHub
 function GMGenie.Hud.onLoad()
     GMGenie_Hud:RegisterEvent("PLAYER_ENTERING_WORLD");
     GMGenie_Hud:RegisterEvent("UI_ERROR_MESSAGE");

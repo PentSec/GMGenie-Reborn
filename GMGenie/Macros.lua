@@ -1,70 +1,134 @@
---This file is part of Game Master Genie.
---Copyright 2011-2014 Chocochaos
-
---Game Master Genie is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
---Game Master Genie is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
---You should have received a copy of the GNU General Public License along with Game Master Genie. If not, see <http://www.gnu.org/licenses/>.
-
+-- This file is part of Game Master Genie.
+-- Copyright 2011-2014 Chocochaos
+-- Game Master Genie is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
+-- Game Master Genie is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+-- You should have received a copy of the GNU General Public License along with Game Master Genie. If not, see <http://www.gnu.org/licenses/>.
 GMGenie.Macros = {};
 
 function GMGenie.Macros.onLoad()
     GMGenie.Macros.menuItems = {};
 
-    UnitPopupButtons["GMGenie_Commands"] = { text = "Quick Commands", dist = 0, nested = 1 };
+    UnitPopupButtons["GMGenie_Commands"] = {
+        text = "Quick Commands",
+        dist = 0,
+        nested = 1
+    };
     table.insert(GMGenie.Macros.menuItems, "Commands");
     UnitPopupMenus["GMGenie_Commands"] = {};
 
-    UnitPopupButtons["GMGenie_Revive"] = { text = "Revive", dist = 0 };
+    UnitPopupButtons["GMGenie_Revive"] = {
+        text = "Revive",
+        dist = 0
+    };
     table.insert(UnitPopupMenus["GMGenie_Commands"], "GMGenie_Revive");
-    UnitPopupButtons["GMGenie_Appear"] = { text = "Appear", dist = 0 };
+    UnitPopupButtons["GMGenie_Appear"] = {
+        text = "Appear",
+        dist = 0
+    };
     table.insert(UnitPopupMenus["GMGenie_Commands"], "GMGenie_Appear");
-    UnitPopupButtons["GMGenie_Summon"] = { text = "Summon", dist = 0 };
+    UnitPopupButtons["GMGenie_Summon"] = {
+        text = "Summon",
+        dist = 0
+    };
     table.insert(UnitPopupMenus["GMGenie_Commands"], "GMGenie_Summon");
-    UnitPopupButtons["GMGenie_Freeze"] = { text = "Freeze", dist = 0 };
+    UnitPopupButtons["GMGenie_Freeze"] = {
+        text = "Freeze",
+        dist = 0
+    };
     table.insert(UnitPopupMenus["GMGenie_Commands"], "GMGenie_Freeze");
-    UnitPopupButtons["GMGenie_Unfreeze"] = { text = "Unfreeze", dist = 0 };
+    UnitPopupButtons["GMGenie_Unfreeze"] = {
+        text = "Unfreeze",
+        dist = 0
+    };
     table.insert(UnitPopupMenus["GMGenie_Commands"], "GMGenie_Unfreeze");
-    UnitPopupButtons["GMGenie_Spy"] = { text = "Spy", dist = 0 };
+    UnitPopupButtons["GMGenie_Spy"] = {
+        text = "Spy",
+        dist = 0
+    };
     table.insert(UnitPopupMenus["GMGenie_Commands"], "GMGenie_Spy");
 
-    UnitPopupButtons["GMGenie_Character"] = { text = "Character", dist = 0, nested = 1 };
+    UnitPopupButtons["GMGenie_Character"] = {
+        text = "Character",
+        dist = 0,
+        nested = 1
+    };
     table.insert(GMGenie.Macros.menuItems, "Character");
     UnitPopupMenus["GMGenie_Character"] = {};
 
-    UnitPopupButtons["GMGenie_Character_Rename"] = { text = "Rename", dist = 0 };
+    UnitPopupButtons["GMGenie_Character_Rename"] = {
+        text = "Rename",
+        dist = 0
+    };
     table.insert(UnitPopupMenus["GMGenie_Character"], "GMGenie_Character_Rename");
-    UnitPopupButtons["GMGenie_Character_Customize"] = { text = "Customize", dist = 0 };
+    UnitPopupButtons["GMGenie_Character_Customize"] = {
+        text = "Customize",
+        dist = 0
+    };
     table.insert(UnitPopupMenus["GMGenie_Character"], "GMGenie_Character_Customize");
-    UnitPopupButtons["GMGenie_Character_Changerace"] = { text = "Change Race", dist = 0 };
+    UnitPopupButtons["GMGenie_Character_Changerace"] = {
+        text = "Change Race",
+        dist = 0
+    };
     table.insert(UnitPopupMenus["GMGenie_Character"], "GMGenie_Character_Changerace");
-    UnitPopupButtons["GMGenie_Character_Changefaction"] = { text = "Change Faction", dist = 0 };
+    UnitPopupButtons["GMGenie_Character_Changefaction"] = {
+        text = "Change Faction",
+        dist = 0
+    };
     table.insert(UnitPopupMenus["GMGenie_Character"], "GMGenie_Character_Changefaction");
 
-    UnitPopupButtons["GMGenie_Whispers"] = { text = "Whisper Macros", dist = 0, nested = 1 };
+    UnitPopupButtons["GMGenie_Whispers"] = {
+        text = "Whisper Macros",
+        dist = 0,
+        nested = 1
+    };
     table.insert(GMGenie.Macros.menuItems, "Whispers");
     GMGenie.Macros.Whispers.addToUnitMenu();
 
-    UnitPopupButtons["GMGenie_Mail"] = { text = "Mail Macros", dist = 0, nested = 1 };
+    UnitPopupButtons["GMGenie_Mail"] = {
+        text = "Mail Macros",
+        dist = 0,
+        nested = 1
+    };
     table.insert(GMGenie.Macros.menuItems, "Mail");
     GMGenie.Macros.Mail.addToUnitMenu();
 
-    UnitPopupButtons["GMGenie_Tele"] = { text = "Teleport Macros", dist = 0, nested = 1 };
+    UnitPopupButtons["GMGenie_Tele"] = {
+        text = "Teleport Macros",
+        dist = 0,
+        nested = 1
+    };
     table.insert(GMGenie.Macros.menuItems, "Tele");
     GMGenie.Macros.Tele.addToUnitMenu();
 
-    UnitPopupButtons["GMGenie_Mute"] = { text = "Mutes", dist = 0, nested = 1 };
+    UnitPopupButtons["GMGenie_Mute"] = {
+        text = "Mutes",
+        dist = 0,
+        nested = 1
+    };
     table.insert(GMGenie.Macros.menuItems, "Mute");
     GMGenie.Macros.Discipline.Mute.addToUnitMenu();
 
-    UnitPopupButtons["GMGenie_CharBan"] = { text = "Character Bans", dist = 0, nested = 1 };
+    UnitPopupButtons["GMGenie_CharBan"] = {
+        text = "Character Bans",
+        dist = 0,
+        nested = 1
+    };
     table.insert(GMGenie.Macros.menuItems, "CharBan");
     GMGenie.Macros.Discipline.CharBan.addToUnitMenu();
 
-    UnitPopupButtons["GMGenie_AccBan"] = { text = "Account Bans", dist = 0, nested = 1 };
+    UnitPopupButtons["GMGenie_AccBan"] = {
+        text = "Account Bans",
+        dist = 0,
+        nested = 1
+    };
     table.insert(GMGenie.Macros.menuItems, "AccBan");
     GMGenie.Macros.Discipline.AccBan.addToUnitMenu();
 
-    UnitPopupButtons["GMGenie_IpBan"] = { text = "Ip Bans", dist = 0, nested = 1 };
+    UnitPopupButtons["GMGenie_IpBan"] = {
+        text = "Ip Bans",
+        dist = 0,
+        nested = 1
+    };
     table.insert(GMGenie.Macros.menuItems, "IpBan");
     GMGenie.Macros.Discipline.IpBan.addToUnitMenu();
 
@@ -101,7 +165,7 @@ function GMGenie.Macros.contextMenuClick(self)
         elseif button == "Unfreeze" then
             GMGenie.Macros.unfreeze(name);
         elseif button == "Spy" then
-            GMGenie.Spy.spy(name);
+            GMGenie.Spy.execute(name);
         elseif button == "Character_Rename" then
             GMGenie.Macros.rename(name);
         elseif button == "Character_Customize" then

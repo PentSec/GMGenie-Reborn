@@ -1,10 +1,8 @@
---This file is part of Game Master Genie.
---Copyright 2011-2014 Chocochaos
-
---Game Master Genie is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
---Game Master Genie is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
---You should have received a copy of the GNU General Public License along with Game Master Genie. If not, see <http://www.gnu.org/licenses/>.
-
+-- This file is part of Game Master Genie.
+-- Copyright 2011-2014 Chocochaos
+-- Game Master Genie is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
+-- Game Master Genie is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+-- You should have received a copy of the GNU General Public License along with Game Master Genie. If not, see <http://www.gnu.org/licenses/>.
 GMGenie = {};
 GMGenie_SavedVars = {};
 
@@ -60,8 +58,8 @@ function GMGenie.onLoad()
     GMGenie.Tickets.onLoad();
 
     -- Please do not remove the copyright notice, it would be a violation of the gpl.
-    GMGenie.showGMMessage("GMGenie Reborn 2.0 by Jeff ((c) 2021).");
-	GMGenie.showGMMessage("GMGenie 0.7.3 by Chocochaos ((c) 2011-2014). The latest version of GM Genie can always be found at http://chocochaos.com/gmgenie/");
+    GMGenie.showGMMessage("GMGenie Reborn 2.0 by Jeff ((c) 2021-2024).");
+    GMGenie.showGMMessage("Laster version here. https://github.com/PentSec/GMGenie-Reborn/");
 end
 
 local frame = CreateFrame("FRAME");
@@ -79,11 +77,11 @@ GMGenie.minimap = {};
 
 -- add this to your SavedVariables or as a separate SavedVariable to store its position
 
-
 -- Call this in a mod's initialization to move the minimap button to its saved position (also used in its movement)
 -- ** do not call from the mod's OnLoad, VARIABLES_LOADED or later is fine. **
 function GMGenie.minimap.reposition()
-    GMGenie_Minimap:SetPoint("TOPLEFT", "Minimap", "TOPLEFT", 52 - (80 * cos(GMGenie_SavedVars.minimapPos)), (80 * sin(GMGenie_SavedVars.minimapPos)) - 52)
+    GMGenie_Minimap:SetPoint("TOPLEFT", "Minimap", "TOPLEFT", 52 - (80 * cos(GMGenie_SavedVars.minimapPos)),
+        (80 * sin(GMGenie_SavedVars.minimapPos)) - 52)
 end
 
 -- Only while the button is dragged this is called every frame

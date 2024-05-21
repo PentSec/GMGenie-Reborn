@@ -1,254 +1,40 @@
 GMGenie.MasterHelper = {};
-function GMGenie.MasterHelper.onLoad()
-    UIDropDownMenu_(GMGenie_MasterHelper_Main_T1melee)
-end
-function GMGenie.Spawns.runMacro()
-    GMGenie.Spawns.macroScheduleTime = 0;
-    local macroText = GMGenie_Spawns_Macro_Macro_Frame_Text:GetText();
-    macroText = string.gsub(macroText, "go", "GMGenie.Spawns.scheduleGo");
-    GMGenie.showGMMessage("Running spawn macro, do not interfere!");
-    RunScript(macroText);
-end
 
-function MeleeT1()
-    SendChatMessage(".additem 58031");
-    SendChatMessage(".additem 58032");
-    SendChatMessage(".additem 58033");
-    SendChatMessage(".additem 58034");
-    SendChatMessage(".additem 58035");
-    SendChatMessage(".additem 58036");
-    SendChatMessage(".additem 58037");
-    SendChatMessage(".additem 58030");
-    SendChatMessage(".additem 58064");
-    SendChatMessage(".additem 58070");
-    SendChatMessage(".additem 58071");
-    SendChatMessage(".additem 58074");
-    SendChatMessage(".additem 58075");
-    SendChatMessage(".additem 58078");
-end
+local tierIDs = {
+    ["MeleeT1"] = {58030, 58031, 58032, 58033, 58034, 58035, 58036, 58037, 58064, 58070, 58071, 58074, 58075, 58078},
+    ["SpellT1"] = {58040, 58041, 58042, 58043, 58044, 58045, 58046, 58047, 58065, 58072, 58073, 58076, 58077, 58079},
+    ["MeleeT2"] = {58090, 58091, 58092, 58093, 58094, 58095, 58096, 58097, 58110, 58111, 58114, 58115, 58118, 58121},
+    ["MeleeT3"] = {58150, 58151, 58152, 58153, 58154, 58155, 58156, 58157, 58170, 58171, 58174, 58175, 58178, 58181},
+    ["MeleeT4"] = {58220, 58221, 58222, 58223, 58224, 58225, 58226, 58227, 58240, 58241, 58244, 58245, 58248, 58251},
+    ["MeleeT5"] = {58320, 58321, 58322, 58323, 58324, 58325, 58326, 58327, 58340, 58341, 58344, 58345, 58348, 58351},
+    ["SpellT2"] = {58100, 58101, 58102, 58103, 58104, 58105, 58106, 58107, 58113, 58116, 58117, 58119, 58120, 58112},
+    ["SpellT3"] = {58160, 58161, 58162, 58163, 58164, 58165, 58166, 58167, 58172, 58173, 58176, 58177, 58179, 58180},
+    ["SpellT4"] = {58230, 58231, 58232, 58233, 58234, 58235, 58236, 58237, 58242, 58243, 58246, 58247, 58249, 58250},
+    ["SpellT5"] = {58330, 58331, 58332, 58333, 58334, 58335, 58336, 58337, 58342, 58343, 58346, 58347, 58349, 58350},
+    ["WeaponT1"] = {58050, 58051, 58052, 58053, 58054, 58055, 58056, 58057, 58058, 58059, 58060, 58061, 58062, 58063},
+    ["WeaponT2"] = {58130, 58131, 58132, 58133, 58134, 58135, 58136, 58137, 58138, 58139, 58140, 58141, 58142, 58143},
+    ["WeaponT3"] = {58200, 58201, 58202, 58203, 58204, 58205, 58206, 58207, 58208, 58209, 58210, 58211, 58212, 58213,
+                    58214},
+    ["WeaponT4"] = {58260, 58261, 58262, 58263, 58264, 58265, 58266, 58267, 58268, 58269, 58270, 58271, 58272, 58273,
+                    58274},
+    ["WeaponT5"] = {58360, 58361, 58362, 58363, 58364, 58365, 58366, 58367, 58368, 58369, 58370, 58371, 58372, 58373,
+                    58374}
+}
 
-function SpellT1()
-    SendChatMessage(".additem 58040");
-    SendChatMessage(".additem 58041");
-    SendChatMessage(".additem 58042");
-    SendChatMessage(".additem 58043");
-    SendChatMessage(".additem 58044");
-    SendChatMessage(".additem 58045");
-    SendChatMessage(".additem 58046");
-    SendChatMessage(".additem 58047");
-    SendChatMessage(".additem 58065");
-    SendChatMessage(".additem 58072");
-    SendChatMessage(".additem 58073");
-    SendChatMessage(".additem 58076");
-    SendChatMessage(".additem 58077");
-    SendChatMessage(".additem 58079");
-end
-
-function MeleeT2()
-    SendChatMessage(".additem 58090");
-    SendChatMessage(".additem 58091");
-    SendChatMessage(".additem 58092");
-    SendChatMessage(".additem 58093");
-    SendChatMessage(".additem 58094");
-    SendChatMessage(".additem 58095");
-    SendChatMessage(".additem 58096");
-    SendChatMessage(".additem 58097");
-    SendChatMessage(".additem 58110");
-    SendChatMessage(".additem 58111");
-    SendChatMessage(".additem 58114");
-    SendChatMessage(".additem 58115");
-    SendChatMessage(".additem 58118");
-    SendChatMessage(".additem 58121");
-end
-
-function MeleeT3()
-    SendChatMessage(".additem 58150");
-    SendChatMessage(".additem 58151");
-    SendChatMessage(".additem 58152");
-    SendChatMessage(".additem 58153");
-    SendChatMessage(".additem 58154");
-    SendChatMessage(".additem 58155");
-    SendChatMessage(".additem 58156");
-    SendChatMessage(".additem 58157");
-    SendChatMessage(".additem 58170");
-    SendChatMessage(".additem 58171");
-    SendChatMessage(".additem 58174");
-    SendChatMessage(".additem 58175");
-    SendChatMessage(".additem 58178");
-    SendChatMessage(".additem 58181");
-end
-
-function MeleeT4()
-    SendChatMessage(".additem 58220");
-    SendChatMessage(".additem 58221");
-    SendChatMessage(".additem 58222");
-    SendChatMessage(".additem 58223");
-    SendChatMessage(".additem 58224");
-    SendChatMessage(".additem 58225");
-    SendChatMessage(".additem 58226");
-    SendChatMessage(".additem 58227");
-    SendChatMessage(".additem 58240");
-    SendChatMessage(".additem 58241");
-    SendChatMessage(".additem 58244");
-    SendChatMessage(".additem 58245");
-    SendChatMessage(".additem 58248");
-    SendChatMessage(".additem 58251");
-end
-
-function MeleeT5()
-    SendChatMessage(".additem 58320");
-    SendChatMessage(".additem 58321");
-    SendChatMessage(".additem 58322");
-    SendChatMessage(".additem 58323");
-    SendChatMessage(".additem 58324");
-    SendChatMessage(".additem 58325");
-    SendChatMessage(".additem 58326");
-    SendChatMessage(".additem 58327");
-    SendChatMessage(".additem 58340");
-    SendChatMessage(".additem 58341");
-    SendChatMessage(".additem 58344");
-    SendChatMessage(".additem 58345");
-    SendChatMessage(".additem 58348");
-    SendChatMessage(".additem 58351");
-end
-
-function SpellT3()
-    SendChatMessage(".additem 58160");
-    SendChatMessage(".additem 58161");
-    SendChatMessage(".additem 58162");
-    SendChatMessage(".additem 58163");
-    SendChatMessage(".additem 58164");
-    SendChatMessage(".additem 58165");
-    SendChatMessage(".additem 58166");
-    SendChatMessage(".additem 58167");
-    SendChatMessage(".additem 58172");
-    SendChatMessage(".additem 58173");
-    SendChatMessage(".additem 58176");
-    SendChatMessage(".additem 58177");
-    SendChatMessage(".additem 58179");
-    SendChatMessage(".additem 58180");
-end
-
-function SpellT4()
-    SendChatMessage(".additem 58230");
-    SendChatMessage(".additem 58231");
-    SendChatMessage(".additem 58232");
-    SendChatMessage(".additem 58233");
-    SendChatMessage(".additem 58234");
-    SendChatMessage(".additem 58235");
-    SendChatMessage(".additem 58236");
-    SendChatMessage(".additem 58237");
-    SendChatMessage(".additem 58242");
-    SendChatMessage(".additem 58243");
-    SendChatMessage(".additem 58246");
-    SendChatMessage(".additem 58247");
-    SendChatMessage(".additem 58249");
-    SendChatMessage(".additem 58250");
-end
-
-function SpellT5()
-    SendChatMessage(".additem 58330");
-    SendChatMessage(".additem 58331");
-    SendChatMessage(".additem 58332");
-    SendChatMessage(".additem 58333");
-    SendChatMessage(".additem 58334");
-    SendChatMessage(".additem 58335");
-    SendChatMessage(".additem 58336");
-    SendChatMessage(".additem 58337");
-    SendChatMessage(".additem 58342");
-    SendChatMessage(".additem 58343");
-    SendChatMessage(".additem 58346");
-    SendChatMessage(".additem 58347");
-    SendChatMessage(".additem 58349");
-    SendChatMessage(".additem 58350");
-end
-
-function WeaponT1()
-    SendChatMessage(".additem 58050");
-    SendChatMessage(".additem 58051");
-    SendChatMessage(".additem 58052");
-    SendChatMessage(".additem 58053");
-    SendChatMessage(".additem 58054");
-    SendChatMessage(".additem 58055");
-    SendChatMessage(".additem 58056");
-    SendChatMessage(".additem 58057");
-    SendChatMessage(".additem 58058");
-    SendChatMessage(".additem 58059");
-    SendChatMessage(".additem 58060");
-    SendChatMessage(".additem 58061");
-    SendChatMessage(".additem 58062");
-    SendChatMessage(".additem 58063");
-end
-
-function WeaponT2()
-    SendChatMessage(".additem 58130");
-    SendChatMessage(".additem 58131");
-    SendChatMessage(".additem 58132");
-    SendChatMessage(".additem 58133");
-    SendChatMessage(".additem 58134");
-    SendChatMessage(".additem 58135");
-    SendChatMessage(".additem 58136");
-    SendChatMessage(".additem 58137");
-    SendChatMessage(".additem 58138");
-    SendChatMessage(".additem 58139");
-    SendChatMessage(".additem 58140");
-    SendChatMessage(".additem 58141");
-    SendChatMessage(".additem 58142");
-    SendChatMessage(".additem 58143");
-end
-
-function WeaponT3()
-    SendChatMessage(".additem 58200");
-    SendChatMessage(".additem 58201");
-    SendChatMessage(".additem 58202");
-    SendChatMessage(".additem 58203");
-    SendChatMessage(".additem 58204");
-    SendChatMessage(".additem 58205");
-    SendChatMessage(".additem 58206");
-    SendChatMessage(".additem 58207");
-    SendChatMessage(".additem 58208");
-    SendChatMessage(".additem 58209");
-    SendChatMessage(".additem 58210");
-    SendChatMessage(".additem 58211");
-    SendChatMessage(".additem 58212");
-    SendChatMessage(".additem 58213");
-    SendChatMessage(".additem 58214");
-end
-
-function WeaponT4()
-    SendChatMessage(".additem 58260");
-    SendChatMessage(".additem 58261");
-    SendChatMessage(".additem 58262");
-    SendChatMessage(".additem 58263");
-    SendChatMessage(".additem 58264");
-    SendChatMessage(".additem 58265");
-    SendChatMessage(".additem 58266");
-    SendChatMessage(".additem 58267");
-    SendChatMessage(".additem 58268");
-    SendChatMessage(".additem 58269");
-    SendChatMessage(".additem 58270");
-    SendChatMessage(".additem 58271");
-    SendChatMessage(".additem 58272");
-    SendChatMessage(".additem 58273");
-    SendChatMessage(".additem 58274");
-end
-
-function WeaponT5()
-    SendChatMessage(".additem 58360");
-    SendChatMessage(".additem 58361");
-    SendChatMessage(".additem 58362");
-    SendChatMessage(".additem 58363");
-    SendChatMessage(".additem 58364");
-    SendChatMessage(".additem 58365");
-    SendChatMessage(".additem 58366");
-    SendChatMessage(".additem 58367");
-    SendChatMessage(".additem 58368");
-    SendChatMessage(".additem 58369");
-    SendChatMessage(".additem 58370");
-    SendChatMessage(".additem 58371");
-    SendChatMessage(".additem 58372");
-    SendChatMessage(".additem 58373");
-    SendChatMessage(".additem 58374");
+function AddTier(tierType)
+    local ids = tierIDs[tierType]
+    if not ids then
+        GMGenie.showGMMessage("Invalid tier type: " .. tostring(tierType))
+        return
+    end
+    if UnitName("target") == UnitName("player") or UnitName("target") == nil then
+        GemsAmmount:ClearFocus()
+        for _, tierIDs in ipairs(ids) do
+            SendChatMessage(".additem " .. tierIDs, "GUILD")
+        end
+    else
+        GMGenie.showGMMessage("Be sure to target yourself before clicking.")
+    end
 end
 
 function OnPoint()

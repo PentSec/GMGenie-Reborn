@@ -12,6 +12,7 @@
 ## Version: 2.0
 ## DefaultState: Enabled
 ## SavedVariables: GMGenie_SavedVars
+
 GMGenie.xml
 Chronos\Chronos.xml
 GMGenie.lua

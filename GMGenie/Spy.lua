@@ -1,10 +1,8 @@
---This file is part of Game Master Genie.
---Copyright 2011-2014 Chocochaos
-
---Game Master Genie is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
---Game Master Genie is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
---You should have received a copy of the GNU General Public License along with Game Master Genie. If not, see <http://www.gnu.org/licenses/>.
-
+-- This file is part of Game Master Genie.
+-- Copyright 2011-2014 Chocochaos
+-- Game Master Genie is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3 of the License.
+-- Game Master Genie is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+-- You should have received a copy of the GNU General Public License along with Game Master Genie. If not, see <http://www.gnu.org/licenses/>.
 GMGenie.Spy = {};
 GMGenie.Spy.waitingForPin = false;
 GMGenie.Spy.pinCache = "";
@@ -22,7 +20,25 @@ function GMGenie.Spy.spy(name)
     end
     if name and string.len(name) > 1 then
         GMGenie.Spy.waitingForPin = true;
-        GMGenie.Spy.currentRequest = { account = "", accountId = "", class = "", email = "", gmLevel = "", guid = "", guild = "", ip = "", latency = "", level = "", location = "", login = "", money = "", name = "", phase = "", playedTime = "", race = "" };
+        GMGenie.Spy.currentRequest = {
+            account = "",
+            accountId = "",
+            class = "",
+            email = "",
+            gmLevel = "",
+            guid = "",
+            guild = "",
+            ip = "",
+            latency = "",
+            level = "",
+            location = "",
+            login = "",
+            money = "",
+            name = "",
+            phase = "",
+            playedTime = "",
+            race = ""
+        };
         GMGenie.Spy.clearCache();
         GMGenie.Spy.resetBoxes();
         GMGenie.Spy.currentRequest["name"] = name;
@@ -176,7 +192,9 @@ function GMGenie.Spy.abortWaitingForMail()
 end
 
 function GMGenie.Spy.resetBoxes()
-    GMGenie_Spy_InfoWindow_Info_CharInfo:SetText("Level " .. GMGenie.Spy.currentRequest["level"] .. " " .. GMGenie.Spy.currentRequest["race"] .. " " .. GMGenie.Spy.currentRequest["class"]);
+    GMGenie_Spy_InfoWindow_Info_CharInfo:SetText("Level " .. GMGenie.Spy.currentRequest["level"] .. " " ..
+                                                     GMGenie.Spy.currentRequest["race"] .. " " ..
+                                                     GMGenie.Spy.currentRequest["class"]);
     GMGenie_Spy_InfoWindow_Info_Guild:SetText(GMGenie.Spy.currentRequest["guild"]);
     GMGenie_Spy_InfoWindow_Title_Text:SetText(GMGenie.Spy.currentRequest["name"]);
     GMGenie_Spy_InfoWindow_Character_Name:SetText(GMGenie.Spy.currentRequest["name"]);
