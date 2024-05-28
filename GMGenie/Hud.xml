@@ -22,7 +22,7 @@
 	</Button>
 	<Button name="GMGenie_Hud" inherits="GMGenie_Window" hidden="false">
 		<Size>
-			<AbsDimension x="150" y="185" />
+			<AbsDimension x="150" y="210" />
 		</Size>
 		<Anchors>
 			<Anchor point="TOPRIGHT" relativeTo="MinimapCluster" relativePoint="BOTTOMRIGHT" />
@@ -31,7 +31,7 @@
 			<Button name="$parent_GM" inherits="GMGenie_Hud_Statusbutton" text="">
 				<Anchors>
 					<Anchor point="TOP">
-						<Offset x="-27" y="-31" />
+						<Offset x="0" y="-31" />
 					</Anchor>
 				</Anchors>
 			</Button>
@@ -118,6 +118,19 @@
 				<Scripts>
 					<OnClick>
 						                        GMGenie.MasterHelper.toggle();
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parent_NpcSpawn" inherits="GMGenie_Button" text="ID Increment">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Hud_MasterHelper" relativePoint="BOTTOMLEFT" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						                        GMGenie.NpcSpawn.toggle();
 					</OnClick>
 				</Scripts>
 			</Button>

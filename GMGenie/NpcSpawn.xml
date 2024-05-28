@@ -1,0 +1,200 @@
+<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.blizzard.com/wow/ui/  http://wowprogramming.com/FrameXML/UI.xsd" xmlns="http://www.blizzard.com/wow/ui/">
+	<Button name="GMGenie_NpcSpawn_Main" inherits="GMGenie_Window" hidden="true">
+		<Size>
+			<AbsDimension x="165" y="183" />
+		</Size>
+		<Anchors>
+			<Anchor point="LEFT" x="263" y="140" />
+		</Anchors>
+		<Frames>
+			<Frame>
+				<Size x="114" y="36" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-16" />
+				</Anchors>
+				<Backdrop bgFile="" edgeFile="" />
+				<Layers>
+					<Layer level="OVERLAY">
+						<FontString inherits="GenieFontNormalSmall" text="Enter ID">
+							<Size x="75" y="12" />
+							<Anchors>
+								<Anchor point="TOPLEFT" x="45" y="-4" />
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Frames> 
+					<EditBox name="DisPID" inherits="GMGenie_Input_Text" enableMouse="true">
+						<Size x="80" y="17" />
+						<Anchors>
+							<Anchor point="TOPLEFT" x="43" y="-19" />
+						</Anchors>
+						<Scripts>
+							<OnTextChanged>
+								if self:GetText():match("%D") then
+									self:SetText(self:GetText():gsub("%D", ""))
+									self:SetCursorPosition(#self:GetText())
+								end
+							</OnTextChanged>
+							<OnChar>
+								if not arg1:match("%d") then
+									self:ClearFocus()
+								end
+							</OnChar>
+						</Scripts>
+					</EditBox>
+				</Frames>
+			</Frame>
+			<Button name="spawninc" inherits="GMGenie_Button" text="Spawn &amp; Increase ID">
+				<Size x="160" y="20" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-58" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						local MyID = getglobal("DisPID"):GetText();
+SendChatMessage(".npc add " .. MyID);
+MyID = MyID + 1;
+getglobal("DisPID"):SetText(MyID);
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="center">
+				</ButtonText>
+			</Button>
+			<Button name="morphinc" inherits="GMGenie_Button" text="Morph &amp; Increase ID">
+				<Size x="160" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-76" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+		  local waitTable = {};
+		  local waitFrame = nil;
+		  local MyID = getglobal("DisPID"):GetText();
+		  mk_morph(MyID);
+		  MyID = MyID + 1;
+		  getglobal("DisPID"):SetText(MyID);
+		  </OnClick>
+				  </Scripts>
+				<ButtonText name="$parentText" justifyH="center">
+				</ButtonText>
+			</Button>
+			<Button name="additeminc" inherits="GMGenie_Button" text="AddItem &amp; Increase ID">
+				<Size>
+					<AbsDimension x="160" y="16" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-94" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						AddItemAndIncreaseID()
+					</OnClick>
+				</Scripts>
+				<Layers>
+					<Layer level="ARTWORK">
+						<FontString name="$parentText" inherits="GameFontNormal" justifyH="CENTER" />
+					</Layer>
+				</Layers>
+			</Button>
+			<EditBox name="StatusAdd" autoFocus="false">
+				<Size>
+					<AbsDimension x="10" y="20" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="539" y="-191" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEscapePressed>self:ClearFocus();</OnEscapePressed>
+				</Scripts>
+				<FontString font="Fonts\ARIALN.TTF">
+					<FontHeight>
+						<AbsValue val="14" />
+					</FontHeight>
+					<Color r="1" g="1" b="1" />
+					<Shadow>
+						<Color r="0" g="0" b="0" />
+						<Offset>
+							<AbsDimension x="1" y="-1" />
+						</Offset>
+					</Shadow>
+				</FontString>
+				<HighlightColor r="1" g="1" b="1" />
+				<TextInsets>
+					<AbsInset left="0" right="0" top="0" bottom="0" />
+				</TextInsets>
+			</EditBox>
+			<Button name="addobj" inherits="GMGenie_Button" text="AddObject &amp; increase ID">
+				<Size x="160" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-112" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						local MyID = getglobal("DisPID"):GetText();
+SendChatMessage(".gob add " .. MyID);
+MyID = MyID + 1;
+getglobal("DisPID"):SetText(MyID);
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="center">
+				</ButtonText>
+			</Button>
+			<Button name="addauraspell" inherits="GMGenie_Button" text="AuraSpell &amp; Increase ID">
+				<Size x="160" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-130" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						mk_aura();
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="center">
+				</ButtonText>
+			</Button>
+			<Button name="scalecero" inherits="GMGenie_Button" text="Scale 0.1">
+				<Size x="60" y="16" />
+				<Anchors>
+					<Anchor point="TOPLEFT" x="3" y="-148" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						SendChatMessage(".modi scale 0.1");
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="center">
+				</ButtonText>
+			</Button>
+			<Button name="Scaleone" inherits="GMGenie_Button" text="Scale 1">
+				<Size x="60" y="16" />
+				<Anchors>
+					<Anchor point="TOPRIGHT" x="0" y="-148" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						SendChatMessage(".modi scale 1");
+					</OnClick>
+				</Scripts>
+				<ButtonText name="$parentText" justifyH="center">
+				</ButtonText>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnLoad>
+				                GMGenie.loadWindow(self, 'NpcSpawn', false, nil);
+			</OnLoad>
+			<OnDoubleClick>
+				                self:ClearAllPoints();
+				                self:SetPoint("LEFT");
+			</OnDoubleClick>
+			<OnClick>
+				GMGenie_NpcSpawn_Main_OnClick()
+			</OnClick>
+		</Scripts>
+	</Button>
+</Ui>

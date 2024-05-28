@@ -235,6 +235,10 @@
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-228" />
 				</Anchors>
+				<Scripts>
+					<OnClick>
+					</OnClick>
+				</Scripts>
 			</Button>
 			<Button name="T5_WEAPONS" inherits="GMGenie_Button" text="T5 Weapons">
 				<Size>
