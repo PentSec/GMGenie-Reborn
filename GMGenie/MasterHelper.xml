@@ -202,19 +202,6 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="GMGenie_MasterHelper_Main_BuffMe" inherits="GMGenie_Button" text="Buff Me">
-				<Size>
-					<AbsDimension x="90" y="18" />
-				</Size>
-				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-180" />
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						BuffMe()
-					</OnClick>
-				</Scripts>
-			</Button>
 			<Button name="GMGenie_MasterHelper_Main_Gems" inherits="GMGenie_Button" text="Gems">
 				<Size>
 					<AbsDimension x="90" y="18" />
@@ -228,7 +215,20 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="notuse2" inherits="GMGenie_Button" text="-----">
+			<Button name="GMGenie_MasterHelper_Main_BuffMe" inherits="GMGenie_Button" text="Buff Me">
+				<Size>
+					<AbsDimension x="90" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-180" />
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						BuffMe()
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="notuse2" inherits="GMGenie_Button" text="Remove Buffs">
 				<Size>
 					<AbsDimension x="90" y="18" />
 				</Size>
@@ -237,6 +237,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
+						RemoveBuffs()
 					</OnClick>
 				</Scripts>
 			</Button>

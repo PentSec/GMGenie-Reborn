@@ -57,8 +57,7 @@ function BuffMe()
     if UnitName("target") == UnitName("player") or UnitName("target") == nil then
         GemsAmmount:ClearFocus()
         SendChatMessage(".aura 82020");
-        SendChatMessage(".aura 82086");
-        SendChatMessage(".aura 82086");
+        -- SendChatMessage(".aura 82086");
         SendChatMessage(".aura 82084");
         SendChatMessage(".aura 82083");
         SendChatMessage(".aura 82082");
@@ -68,7 +67,22 @@ function BuffMe()
     else
         GMGenie.showGMMessage("Be sure to target yourself before clicking.")
     end
+end
 
+function RemoveBuffs()
+    if UnitName("target") == UnitName("player") or UnitName("target") == nil then
+        GemsAmmount:ClearFocus()
+        SendChatMessage(".unaura 82020");
+        SendChatMessage(".unaura 82086");
+        SendChatMessage(".unaura 82084");
+        SendChatMessage(".unaura 82083");
+        SendChatMessage(".unaura 82082");
+        SendChatMessage(".unaura 82081");
+        SendChatMessage(".unaura 82096");
+        SendChatMessage(".unaura 82098");
+    else
+        GMGenie.showGMMessage("Be sure to target yourself before clicking.")
+    end
 end
 
 function GMGenie.MasterHelper.toggle()
