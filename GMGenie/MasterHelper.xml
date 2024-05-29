@@ -207,11 +207,11 @@
 					<AbsDimension x="90" y="18" />
 				</Size>
 				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-204" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-180" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
-											GMGenie.Gems.toggle();
+						GMGenie.Gems.toggle();
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -220,7 +220,7 @@
 					<AbsDimension x="90" y="18" />
 				</Size>
 				<Anchors>
-					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-180" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-204" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -282,11 +282,11 @@
 		</Frames>
 		<Scripts>
 			<OnLoad>
-				                GMGenie.loadWindow(self, 'Master Helper', false, nil);
+				GMGenie.loadWindow(self, 'MasterWoW Helper', false, nil);
 			</OnLoad>
 			<OnDoubleClick>
-				                self:ClearAllPoints();
-				                self:SetPoint("LEFT");
+				self:ClearAllPoints();
+				self:SetPoint("LEFT");
 			</OnDoubleClick>
 		</Scripts>
 	</Button>

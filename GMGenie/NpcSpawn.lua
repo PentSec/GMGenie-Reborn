@@ -1,12 +1,10 @@
 GMGenie.NpcSpawn = {};
 
-local type_Display = false;
 function mk_morph(ID)
     SendChatMessage(".demorph");
     SendChatMessage(".morph " .. ID);
 end
 
-local currentID = nil
 local function SendChatMessageDelayed(message, delay)
     C_Timer.After(delay, function()
         SendChatMessage(message)
@@ -15,14 +13,12 @@ end
 
 function mk_aura()
     local DisPID = _G["DisPID"]
-    local id = tonumber(DisPID:GetText())
-    if currentID then
-        SendChatMessageDelayed(".unaura " .. currentID, 0)
-    end
-    currentID = id
-    SendChatMessageDelayed(".aura " .. currentID, 0.5)
-    local newID = currentID + 1
-    DisPID:SetText(tostring(newID))
+    local currentID = tonumber(DisPID:GetText())
+    local recentAura = currentID - 1
+    SendChatMessage(".unaura " .. recentAura)
+    SendChatMessage(".aura " .. currentID)
+    currentID = currentID + 1
+    DisPID:SetText(tostring(currentID))
 end
 
 local function AddItemAndIncreaseID()

@@ -40,14 +40,14 @@ end
 function OnPoint()
     if UnitName("target") == UnitName("player") or UnitName("target") == nil then
         GemsAmmount:ClearFocus()
-        SendChatMessage(".level 10");
-        SendChatMessage(".mod money 50000000");
-        SendChatMessage(".additem 58378 4");
-        SendChatMessage(".additem 58379 4");
-        SendChatMessage(".additem 110001 999");
-        SendChatMessage(".additem 58376");
-        SendChatMessage(".additem 58377");
-        SendChatMessage(".additem 58375");
+        SendChatMessage(".level 10")
+        SendChatMessage(".mod money 50000000")
+        SendChatMessage(".additem 58378 4")
+        SendChatMessage(".additem 58379 4")
+        SendChatMessage(".additem 110001 999")
+        SendChatMessage(".additem 58376")
+        SendChatMessage(".additem 58377")
+        SendChatMessage(".additem 58375")
     else
         GMGenie.showGMMessage("Be sure to target yourself before clicking.")
     end
@@ -56,14 +56,14 @@ end
 function BuffMe()
     if UnitName("target") == UnitName("player") or UnitName("target") == nil then
         GemsAmmount:ClearFocus()
-        SendChatMessage(".aura 82020");
-        -- SendChatMessage(".aura 82086");
-        SendChatMessage(".aura 82084");
-        SendChatMessage(".aura 82083");
-        SendChatMessage(".aura 82082");
-        SendChatMessage(".aura 82081");
-        SendChatMessage(".aura 82096");
-        SendChatMessage(".aura 82098");
+        SendChatMessage(".aura 82020")
+        -- SendChatMessage(".aura 82086")
+        SendChatMessage(".aura 82084")
+        SendChatMessage(".aura 82083")
+        SendChatMessage(".aura 82082")
+        SendChatMessage(".aura 82081")
+        SendChatMessage(".aura 82096")
+        SendChatMessage(".aura 82098")
     else
         GMGenie.showGMMessage("Be sure to target yourself before clicking.")
     end
@@ -72,14 +72,14 @@ end
 function RemoveBuffs()
     if UnitName("target") == UnitName("player") or UnitName("target") == nil then
         GemsAmmount:ClearFocus()
-        SendChatMessage(".unaura 82020");
-        SendChatMessage(".unaura 82086");
-        SendChatMessage(".unaura 82084");
-        SendChatMessage(".unaura 82083");
-        SendChatMessage(".unaura 82082");
-        SendChatMessage(".unaura 82081");
-        SendChatMessage(".unaura 82096");
-        SendChatMessage(".unaura 82098");
+        SendChatMessage(".unaura 82020")
+        SendChatMessage(".unaura 82086")
+        SendChatMessage(".unaura 82084")
+        SendChatMessage(".unaura 82083")
+        SendChatMessage(".unaura 82082")
+        SendChatMessage(".unaura 82081")
+        SendChatMessage(".unaura 82096")
+        SendChatMessage(".unaura 82098")
     else
         GMGenie.showGMMessage("Be sure to target yourself before clicking.")
     end
@@ -88,18 +88,18 @@ end
 function GMGenie.MasterHelper.toggle()
     local frame = GMGenie_MasterHelper_Main;
     if frame:IsVisible() then
-        frame:Hide();
+        frame:Hide()
     else
-        frame:Show();
+        frame:Show()
     end
 end
 
 function GMGenie.Gems.toggle()
     local frame = GMGenie_Gems_Main;
     if frame:IsVisible() then
-        frame:Hide();
+        frame:Hide()
     else
-        frame:Show();
+        frame:Show()
     end
 end
 
