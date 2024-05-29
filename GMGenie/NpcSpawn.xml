@@ -23,7 +23,7 @@
 						</FontString>
 					</Layer>
 				</Layers>
-				<Frames> 
+				<Frames>
 					<EditBox name="DisPID" inherits="GMGenie_Input_Text" enableMouse="true">
 						<Size x="80" y="17" />
 						<Anchors>
@@ -52,10 +52,10 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						local MyID = getglobal("DisPID"):GetText();
-SendChatMessage(".npc add " .. MyID);
-MyID = MyID + 1;
-getglobal("DisPID"):SetText(MyID);
+						local MyID = getglobal("DisPID"):GetText()
+						SendChatMessage(".npc add " .. MyID)
+						MyID = MyID + 1
+						getglobal("DisPID"):SetText(MyID)
 					</OnClick>
 				</Scripts>
 				<ButtonText name="$parentText" justifyH="center">
@@ -68,13 +68,13 @@ getglobal("DisPID"):SetText(MyID);
 				</Anchors>
 				<Scripts>
 					<OnClick>
-		  local waitTable = {};
-		  local waitFrame = nil;
-		  local MyID = getglobal("DisPID"):GetText();
-		  mk_morph(MyID);
-		  MyID = MyID + 1;
-		  getglobal("DisPID"):SetText(MyID);
-		  </OnClick>
+						local waitTable = {}
+						local waitFrame = nil
+						local MyID = getglobal("DisPID"):GetText()
+						mk_morph(MyID)
+						MyID = MyID + 1
+						getglobal("DisPID"):SetText(MyID)
+					</OnClick>
 				  </Scripts>
 				<ButtonText name="$parentText" justifyH="center">
 				</ButtonText>
@@ -109,7 +109,7 @@ getglobal("DisPID"):SetText(MyID);
 					</Anchor>
 				</Anchors>
 				<Scripts>
-					<OnEscapePressed>self:ClearFocus();</OnEscapePressed>
+					<OnEscapePressed>self:ClearFocus()</OnEscapePressed>
 				</Scripts>
 				<FontString font="Fonts\ARIALN.TTF">
 					<FontHeight>
@@ -135,10 +135,10 @@ getglobal("DisPID"):SetText(MyID);
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						local MyID = getglobal("DisPID"):GetText();
-SendChatMessage(".gob add " .. MyID);
-MyID = MyID + 1;
-getglobal("DisPID"):SetText(MyID);
+						local MyID = getglobal("DisPID"):GetText()
+						SendChatMessage(".gob add " .. MyID)
+						MyID = MyID + 1
+						getglobal("DisPID"):SetText(MyID)
 					</OnClick>
 				</Scripts>
 				<ButtonText name="$parentText" justifyH="center">
@@ -151,7 +151,7 @@ getglobal("DisPID"):SetText(MyID);
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						mk_aura();
+						mk_aura()
 					</OnClick>
 				</Scripts>
 				<ButtonText name="$parentText" justifyH="center">
@@ -164,7 +164,7 @@ getglobal("DisPID"):SetText(MyID);
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						SendChatMessage(".modi scale 0.1");
+						SendChatMessage(".modi scale 0.1")
 					</OnClick>
 				</Scripts>
 				<ButtonText name="$parentText" justifyH="center">
@@ -177,7 +177,7 @@ getglobal("DisPID"):SetText(MyID);
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						SendChatMessage(".modi scale 1");
+						SendChatMessage(".modi scale 1")
 					</OnClick>
 				</Scripts>
 				<ButtonText name="$parentText" justifyH="center">
@@ -186,11 +186,11 @@ getglobal("DisPID"):SetText(MyID);
 		</Frames>
 		<Scripts>
 			<OnLoad>
-				                GMGenie.loadWindow(self, 'NpcSpawn', false, nil);
+				GMGenie.loadWindow(self, 'NpcSpawn', false, nil)
 			</OnLoad>
 			<OnDoubleClick>
-				                self:ClearAllPoints();
-				                self:SetPoint("LEFT");
+				self:ClearAllPoints()
+				self:SetPoint("LEFT")
 			</OnDoubleClick>
 			<OnClick>
 				GMGenie_NpcSpawn_Main_OnClick()

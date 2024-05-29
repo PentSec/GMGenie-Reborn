@@ -22,7 +22,7 @@
 	</Button>
 	<Button name="GMGenie_Hud" inherits="GMGenie_Window" hidden="false">
 		<Size>
-			<AbsDimension x="150" y="210" />
+			<AbsDimension x="100" y="195" />
 		</Size>
 		<Anchors>
 			<Anchor point="TOPRIGHT" relativeTo="MinimapCluster" relativePoint="BOTTOMRIGHT" />
@@ -31,7 +31,7 @@
 			<Button name="$parent_GM" inherits="GMGenie_Hud_Statusbutton" text="">
 				<Anchors>
 					<Anchor point="TOP">
-						<Offset x="0" y="-31" />
+						<Offset x="0" y="-19" />
 					</Anchor>
 				</Anchors>
 			</Button>
@@ -64,7 +64,7 @@
 				</Anchors>
 				<Scripts>
 					<OnEnterPressed>
-						                        GMGenie.Hud.setSpeed();
+						GMGenie.Hud.setSpeed();
 					</OnEnterPressed>
 				</Scripts>
 			</EditBox>
@@ -74,7 +74,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						                        GMGenie.Hud.setSpeed();
+						GMGenie.Hud.setSpeed();
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -91,7 +91,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						                        GMGenie.Tickets.toggle();
+						GMGenie.Tickets.toggle()
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -104,7 +104,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						                        GMGenie.Spawns.toggle();
+						GMGenie.Spawns.toggle()
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -117,7 +117,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						                        GMGenie.MasterHelper.toggle();
+						GMGenie.MasterHelper.toggle()
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -130,18 +130,18 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						                        GMGenie.NpcSpawn.toggle();
+						GMGenie.NpcSpawn.toggle()
 					</OnClick>
 				</Scripts>
 			</Button>
 		</Frames>
 		<Scripts>
 			<OnLoad>
-				GMGenie.loadWindow(self, 'GMGenie Reborn', true, function() GMGenie.Hud.checkStatus(); end);
+				GMGenie.loadWindow(self, 'GMGenieR', true, function() GMGenie.Hud.checkStatus(); end)
 			</OnLoad>
 			<OnDoubleClick>
-				                self:ClearAllPoints();
-				                self:SetPoint("TOPRIGHT", MinimapCluster, "BOTTOMRIGHT");
+				self:ClearAllPoints()
+				self:SetPoint("TOPRIGHT", MinimapCluster, "BOTTOMRIGHT")
 			</OnDoubleClick>
 		</Scripts>
 	</Button>

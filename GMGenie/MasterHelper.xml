@@ -202,7 +202,7 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="GMGenie_MasterHelper_Main_BuffMe" inherits="GMGenie_Button" text="Buff Me">
+			<Button name="GMGenie_MasterHelper_Main_Gems" inherits="GMGenie_Button" text="Gems">
 				<Size>
 					<AbsDimension x="90" y="18" />
 				</Size>
@@ -211,11 +211,11 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						BuffMe()
+						GMGenie.Gems.toggle();
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="GMGenie_MasterHelper_Main_Gems" inherits="GMGenie_Button" text="Gems">
+			<Button name="GMGenie_MasterHelper_Main_BuffMe" inherits="GMGenie_Button" text="Buff Me">
 				<Size>
 					<AbsDimension x="90" y="18" />
 				</Size>
@@ -224,11 +224,11 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-											GMGenie.Gems.toggle();
+						BuffMe()
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="notuse2" inherits="GMGenie_Button" text="-----">
+			<Button name="notuse2" inherits="GMGenie_Button" text="Remove Buffs">
 				<Size>
 					<AbsDimension x="90" y="18" />
 				</Size>
@@ -237,6 +237,7 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
+						RemoveBuffs()
 					</OnClick>
 				</Scripts>
 			</Button>
@@ -281,11 +282,11 @@
 		</Frames>
 		<Scripts>
 			<OnLoad>
-				                GMGenie.loadWindow(self, 'Master Helper', false, nil);
+				GMGenie.loadWindow(self, 'MasterWoW Helper', false, nil);
 			</OnLoad>
 			<OnDoubleClick>
-				                self:ClearAllPoints();
-				                self:SetPoint("LEFT");
+				self:ClearAllPoints();
+				self:SetPoint("LEFT");
 			</OnDoubleClick>
 		</Scripts>
 	</Button>
