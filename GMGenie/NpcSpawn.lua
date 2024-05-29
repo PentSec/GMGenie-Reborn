@@ -1,8 +1,25 @@
 GMGenie.NpcSpawn = {};
 
-function mk_morph(ID)
-    SendChatMessage(".demorph");
-    SendChatMessage(".morph " .. ID);
+function mk_morph()
+    local DisPID = _G["DisPID"]
+    local currentID = tonumber(DisPID:GetText())
+    local recentAura = currentID - 1
+    SendChatMessage(".demorph")
+    currentID = currentID + 1
+    SendChatMessage(".demorph")
+    SendChatMessage(".morph " .. currentID)
+    DisPID:SetText(tostring(currentID))
+end
+
+function mk_reversemorph()
+    local DisPID = _G["DisPID"]
+    local currentID = tonumber(DisPID:GetText())
+    local recentAura = currentID
+    SendChatMessage(".demorph")
+    currentID = currentID - 1
+    SendChatMessage(".demorph")
+    SendChatMessage(".morph " .. currentID)
+    DisPID:SetText(tostring(currentID))
 end
 
 local function SendChatMessageDelayed(message, delay)
@@ -18,6 +35,16 @@ function mk_aura()
     SendChatMessage(".unaura " .. recentAura)
     SendChatMessage(".aura " .. currentID)
     currentID = currentID + 1
+    DisPID:SetText(tostring(currentID))
+end
+
+function reverse_aura()
+    local DisPID = _G["DisPID"]
+    local currentID = tonumber(DisPID:GetText())
+    local recentAura = currentID
+    SendChatMessage(".unaura " .. recentAura)
+    currentID = currentID - 1
+    SendChatMessage(".aura " .. currentID)
     DisPID:SetText(tostring(currentID))
 end
 

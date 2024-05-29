@@ -67,13 +67,15 @@
 					<Anchor point="TOPLEFT" x="3" y="-76" />
 				</Anchors>
 				<Scripts>
+					<OnLoad>
+						self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+					</OnLoad>
 					<OnClick>
-						local waitTable = {}
-						local waitFrame = nil
-						local MyID = getglobal("DisPID"):GetText()
-						mk_morph(MyID)
-						MyID = MyID + 1
-						getglobal("DisPID"):SetText(MyID)
+						if (arg1 == "RightButton") then
+							mk_reversemorph()
+						else
+							mk_morph()
+						end
 					</OnClick>
 				  </Scripts>
 				<ButtonText name="$parentText" justifyH="center">
@@ -150,8 +152,15 @@
 					<Anchor point="TOPLEFT" x="3" y="-130" />
 				</Anchors>
 				<Scripts>
+					<OnLoad>
+						self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+					</OnLoad>
 					<OnClick>
-						mk_aura()
+						if (arg1 == "RightButton") then
+							reverse_aura()
+						else
+							mk_aura()
+						end
 					</OnClick>
 				</Scripts>
 				<ButtonText name="$parentText" justifyH="center">

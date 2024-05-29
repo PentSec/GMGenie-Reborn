@@ -64,6 +64,7 @@ function BuffMe()
         SendChatMessage(".aura 82081")
         SendChatMessage(".aura 82096")
         SendChatMessage(".aura 82098")
+        GMGenie.showGMMessage("right click to remove buffs")
     else
         GMGenie.showGMMessage("Be sure to target yourself before clicking.")
     end

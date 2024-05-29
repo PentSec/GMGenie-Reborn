@@ -215,7 +215,7 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="GMGenie_MasterHelper_Main_BuffMe" inherits="GMGenie_Button" text="Buff Me">
+			<Button name="GMGenie_MasterHelper_Main_BuffMe" inherits="GMGenie_Button" text="Buff/Remove Buff">
 				<Size>
 					<AbsDimension x="90" y="18" />
 				</Size>
@@ -223,12 +223,19 @@
 					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="100" y="-204" />
 				</Anchors>
 				<Scripts>
+					<OnLoad>
+						self:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+					</OnLoad>
 					<OnClick>
-						BuffMe()
+						if (arg1 == "RightButton") then
+							RemoveBuffs()
+						else
+							BuffMe()
+						end
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Button name="notuse2" inherits="GMGenie_Button" text="Remove Buffs">
+			<Button name="notuse2" inherits="GMGenie_Button" text="-----">
 				<Size>
 					<AbsDimension x="90" y="18" />
 				</Size>
@@ -237,7 +244,6 @@
 				</Anchors>
 				<Scripts>
 					<OnClick>
-						RemoveBuffs()
 					</OnClick>
 				</Scripts>
 			</Button>
