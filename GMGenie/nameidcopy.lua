@@ -81,10 +81,4 @@ local function eventHandler(_, event, arg1)
     end
 end
 
-local function save_variables()
-    if db ~= _G.NameCopyTooltipTextBool then
-        _G.NameCopyTooltipTextBool = db
-    end
-end
-
 frame:SetScript('OnEvent', eventHandler)
