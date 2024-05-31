@@ -1,0 +1,8 @@
+<Bindings>
+    <Binding name="NAMECOPY" header="NAMECOPY" category="ADDONS" runOnUp="true">
+        NAME_COPY_ITEM()
+    </Binding>
+    <Binding name="IDCOPY" header="IDCOPY" category="ADDONS" runOnUp="true">
+        ID_COPY_ITEM()
+    </Binding>
+</Bindings>
