@@ -58,6 +58,13 @@ local function SetDefaultBinding(key, action)
         end
     end
 end
+
+local function save_variables()
+    if db ~= _G.NameCopyTooltipTextBool then
+        _G.NameCopyTooltipTextBool = db
+    end
+end
+
 local function entering_world()
     SetDefaultBinding('CTRL-SHIFT-C', 'NAMECOPY')
     SetDefaultBinding('CTRL-C', 'IDCOPY')
@@ -70,7 +77,7 @@ frame:RegisterEvent('PLAYER_LEAVING_WORLD')
 
 local function eventHandler(_, event, arg1)
     if event == 'ADDON_LOADED' then
-        if arg1 == 'NameCopy' then
+        if arg1 == 'GM Genie Reborn' then
             addon_loaded()
         end
     elseif event == 'PLAYER_ENTERING_WORLD' then

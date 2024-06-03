@@ -193,7 +193,6 @@
 				self:SetPoint("LEFT");
 			</OnDoubleClick>
 			<OnClick>
-				GMGenie_Gems_Main_OnClick()
 			</OnClick>
 		</Scripts>
 	</Button>

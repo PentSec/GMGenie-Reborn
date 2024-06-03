@@ -202,7 +202,6 @@
 				self:SetPoint("LEFT")
 			</OnDoubleClick>
 			<OnClick>
-				GMGenie_NpcSpawn_Main_OnClick()
 			</OnClick>
 		</Scripts>
 	</Button>

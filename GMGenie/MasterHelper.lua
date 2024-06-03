@@ -94,13 +94,3 @@ function GMGenie.MasterHelper.toggle()
         frame:Show()
     end
 end
-
-function GMGenie.Gems.toggle()
-    local frame = GMGenie_Gems_Main;
-    if frame:IsVisible() then
-        frame:Hide()
-    else
-        frame:Show()
-    end
-end
-

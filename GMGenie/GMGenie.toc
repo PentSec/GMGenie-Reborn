@@ -5,14 +5,13 @@
 # Game Master Genie is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 # You should have received a copy of the GNU General Public License along with Game Master Genie. If not, see <http://www.gnu.org/licenses/>.
 
-## Interface: 40300
+## Interface: 30300
 ## Title: GM Genie Reborn
 ## Note: Reborn by Jeff - Game Master Genie v0.7.3 by Chocochaos
 ## Author: Jeff - Chocochaos
 ## Version: 2.0
 ## DefaultState: Enabled
 ## SavedVariables: GMGenie_SavedVars
-libs\LibQTip-1.0\LibQTip-1.0.lua
 GMGenie.xml
 Chronos\Chronos.xml
 GMGenie.lua
@@ -52,3 +51,4 @@ Gems.xml
 Gems.lua
 NpcSpawn.lua
 NpcSpawn.xml
+embeds.xml

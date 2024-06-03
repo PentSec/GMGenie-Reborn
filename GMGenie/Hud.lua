@@ -47,45 +47,45 @@ end
 function GMGenie.Hud.gmStatus(status)
     GMGenie.Hud.gm = status;
     if status then
-        GMGenie_Hud_GM:SetText("|cffffffffGM mode ON|r");
+        GMGenie_Hud_GM:SetText("|cffffffffGM ON|r");
     else
-        GMGenie_Hud_GM:SetText("|cffbfbfffGM mode OFF|r");
+        GMGenie_Hud_GM:SetText("|cffbfbfffGM OFF|r");
     end
 end
 
 function GMGenie.Hud.chatStatus(status)
     GMGenie.Hud.chat = status;
     if status then
-        GMGenie_Hud_Chat:SetText("|cffffffffChat badge ON|r");
+        GMGenie_Hud_Chat:SetText("|cffffffffBadge ON|r");
     else
-        GMGenie_Hud_Chat:SetText("|cffbfbfffChat badge OFF|r");
+        GMGenie_Hud_Chat:SetText("|cffbfbfffBadge OFF|r");
     end
 end
 
 function GMGenie.Hud.visibilityStatus(status)
     GMGenie.Hud.visibility = status;
     if status then
-        GMGenie_Hud_Visibility:SetText("|cffffffffYou are VISIBLE|r");
+        GMGenie_Hud_Visibility:SetText("|cffffffffVISIBLE|r");
     else
-        GMGenie_Hud_Visibility:SetText("|cffbfbfffYou are INVISIBLE|r");
+        GMGenie_Hud_Visibility:SetText("|cffbfbfffINVISIBLE|r");
     end
 end
 
 function GMGenie.Hud.whisperStatus(status)
     GMGenie.Hud.whisper = status;
     if status then
-        GMGenie_Hud_Whisper:SetText("|cffffffffWhispers are ON|r");
+        GMGenie_Hud_Whisper:SetText("|cffffffffWhispers ON|r");
     else
-        GMGenie_Hud_Whisper:SetText("|cffbfbfffWhispers are OFF|r");
+        GMGenie_Hud_Whisper:SetText("|cffbfbfffWhispers OFF|r");
     end
 end
 
 function GMGenie.Hud.flyStatus(status)
     GMGenie.Hud.fly = status;
     if status then
-        GMGenie_Hud_Fly:SetText("|cffffffffFlight mode ON|r");
+        GMGenie_Hud_Fly:SetText("|cffffffffFlight ON|r");
     else
-        GMGenie_Hud_Fly:SetText("|cffbfbfffFlight mode OFF|r");
+        GMGenie_Hud_Fly:SetText("|cffbfbfffFlight OFF|r");
     end
 end
 

@@ -86,14 +86,15 @@ end
 
 -- Only while the button is dragged this is called every frame
 function GMGenie.minimap.draggingFrame_OnUpdate()
-    local xpos, ypos = GetCursorPosition()
-    local xmin, ymin = Minimap:GetLeft(), Minimap:GetBottom()
-
-    xpos = xmin - xpos / UIParent:GetScale() + 70 -- get coordinates as differences from the center of the minimap
-    ypos = ypos / UIParent:GetScale() - ymin - 70
-
-    GMGenie_SavedVars.minimapPos = math.deg(math.atan2(ypos, xpos)) -- save the degrees we are relative to the minimap center
-    GMGenie.minimap.reposition() -- move the button
+    local cursorX, cursorY = GetCursorPosition()
+    local minimapLeft, minimapBottom = Minimap:GetLeft(), Minimap:GetBottom()
+    local minimapCenterX = minimapLeft + Minimap:GetWidth() / 2
+    local minimapCenterY = minimapBottom + Minimap:GetHeight() / 2
+    local diffX = cursorX / UIParent:GetScale() - minimapCenterX
+    local diffY = minimapCenterY - cursorY / UIParent:GetScale()
+    local angle = math.deg(math.atan2(diffY, diffX))
+    GMGenie_SavedVars.minimapPos = angle
+    GMGenie.minimap.reposition()
 end
 
 function GMGenie.loadWindow(window, title, refresh, refreshScript)
