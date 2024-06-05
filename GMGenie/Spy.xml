@@ -1,4 +1,4 @@
-<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.blizzard.com/wow/ui/  http://wowprogramming.com/FrameXML/UI.xsd" xmlns="http://www.blizzard.com/wow/ui/">
+<Ui xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/  http://wowprogramming.com/FrameXML/UI.xsd" xmlns="http://www.blizzard.com/wow/ui/">
 	<EditBox name="GMGenie_Spy_Uneditable" inherits="GMGenie_Input_Text" virtual="true" autoFocus="false">
 		<Scripts>
 			<OnChar>
@@ -8,7 +8,7 @@
 	</EditBox>
 	<Button name="GMGenie_Spy_InfoWindow" inherits="GMGenie_Window">
 		<Size>
-			<AbsDimension x="289" y="297" />
+			<AbsDimension x="257" y="297" />
 		</Size>
 		<Anchors>
 			<Anchor point="TOPLEFT" relativeTo="GMGenie_Tickets_View" relativePoint="TOPRIGHT" />
@@ -20,7 +20,7 @@
 				</Size>
 				<Anchors>
 					<Anchor point="TOP">
-						<Offset y="-38" />
+						<Offset x="1" y="-38" />
 					</Anchor>
 				</Anchors>
 				<Layers>
@@ -43,7 +43,7 @@
 					<AbsDimension x="221" y="20" />
 				</Size>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="$parent_Info" relativePoint="BOTTOM" x="0" y="2" />
+					<Anchor y="2" point="TOP" relativeTo="$parent_Info" relativePoint="BOTTOM" />
 				</Anchors>
 				<Layers>
 					<Layer>
@@ -90,7 +90,7 @@
 					<AbsDimension x="221" y="20" />
 				</Size>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="GMGenie_Spy_InfoWindow_Character" relativePoint="BOTTOM" x="0" y="2" />
+					<Anchor y="2" point="TOP" relativeTo="GMGenie_Spy_InfoWindow_Character" relativePoint="BOTTOM" />
 				</Anchors>
 				<Layers>
 					<Layer>
@@ -137,7 +137,7 @@
 					<AbsDimension x="221" y="20" />
 				</Size>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="GMGenie_Spy_InfoWindow_Account" relativePoint="BOTTOM" x="0" y="2" />
+					<Anchor y="2" point="TOP" relativeTo="GMGenie_Spy_InfoWindow_Account" relativePoint="BOTTOM" />
 				</Anchors>
 				<Layers>
 					<Layer>
@@ -172,7 +172,7 @@
 					<AbsDimension x="221" y="20" />
 				</Size>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="GMGenie_Spy_InfoWindow_Email" relativePoint="BOTTOM" x="0" y="2" />
+					<Anchor y="2" point="TOP" relativeTo="GMGenie_Spy_InfoWindow_Email" relativePoint="BOTTOM" />
 				</Anchors>
 				<Layers>
 					<Layer>
@@ -219,7 +219,7 @@
 					<AbsDimension x="221" y="20" />
 				</Size>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="GMGenie_Spy_InfoWindow_IpLat" relativePoint="BOTTOM" x="0" y="2" />
+					<Anchor y="2" point="TOP" relativeTo="GMGenie_Spy_InfoWindow_IpLat" relativePoint="BOTTOM" />
 				</Anchors>
 				<Layers>
 					<Layer>
@@ -254,7 +254,7 @@
 					<AbsDimension x="221" y="20" />
 				</Size>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="GMGenie_Spy_InfoWindow_LastLogin" relativePoint="BOTTOM" x="0" y="2" />
+					<Anchor y="2" point="TOP" relativeTo="GMGenie_Spy_InfoWindow_LastLogin" relativePoint="BOTTOM" />
 				</Anchors>
 				<Layers>
 					<Layer>
@@ -301,7 +301,7 @@
 					<AbsDimension x="221" y="20" />
 				</Size>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="GMGenie_Spy_InfoWindow_PlayedGM" relativePoint="BOTTOM" x="0" y="2" />
+					<Anchor y="2" point="TOP" relativeTo="GMGenie_Spy_InfoWindow_PlayedGM" relativePoint="BOTTOM" />
 				</Anchors>
 				<Layers>
 					<Layer>
@@ -348,7 +348,7 @@
 					<AbsDimension x="221" y="20" />
 				</Size>
 				<Anchors>
-					<Anchor point="TOP" relativeTo="GMGenie_Spy_InfoWindow_MoneyPhase" relativePoint="BOTTOM" x="0" y="2" />
+					<Anchor y="2" point="TOP" relativeTo="GMGenie_Spy_InfoWindow_MoneyPhase" relativePoint="BOTTOM" />
 				</Anchors>
 				<Layers>
 					<Layer>
@@ -381,9 +381,7 @@
 			<Button name="$parent_Whisper" inherits="GMGenie_Button" text="Whisper">
 				<Anchors>
 					<Anchor point="BOTTOMLEFT">
-						<Offset>
-							<AbsDimension x="5" y="5" />
-						</Offset>
+						<Offset x="19" y="5" />
 					</Anchor>
 				</Anchors>
 				<Scripts>
@@ -407,50 +405,12 @@
 					</OnLeave>
 				</Scripts>
 			</Button>
-			<Button name="$parent_Macros" inherits="GMGenie_Dropdown" text="Macros">
-				<Size>
-					<AbsDimension x="110" y="18" />
-				</Size>
-				<Anchors>
-					<Anchor point="BOTTOMLEFT">
-						<Offset>
-							<AbsDimension x="5" y="24" />
-						</Offset>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						                        ToggleDropDownMenu(1, nil, GMGenie_Spy_InfoWindow_DropdownbuttonsOne,
-						                        GMGenie_Spy_InfoWindow_Macros, 0, 0);
-					</OnClick>
-				</Scripts>
-			</Button>
 			<Frame name="$parent_DropdownbuttonsOne" inherits="UIDropDownMenuTemplate" id="50" />
-			<Button name="$parent_Advanced" inherits="GMGenie_Dropdown" text="Advanced tools">
-				<Size>
-					<AbsDimension x="110" y="18" />
-				</Size>
-				<Anchors>
-					<Anchor point="BOTTOMRIGHT">
-						<Offset>
-							<AbsDimension x="-5" y="24" />
-						</Offset>
-					</Anchor>
-				</Anchors>
-				<Scripts>
-					<OnClick>
-						                        ToggleDropDownMenu(1, nil, GMGenie_Spy_InfoWindow_DropdownbuttonsTwo,
-						                        GMGenie_Spy_InfoWindow_Advanced, 0, 0);
-					</OnClick>
-				</Scripts>
-			</Button>
 			<Frame name="$parent_DropdownbuttonsTwo" inherits="UIDropDownMenuTemplate" id="50" />
 			<Button name="$parent_Revive" inherits="GMGenie_Button" text="Revive">
 				<Anchors>
 					<Anchor point="BOTTOMLEFT">
-						<Offset>
-							<AbsDimension x="60" y="5" />
-						</Offset>
+						<Offset x="73" y="5" />
 					</Anchor>
 				</Anchors>
 				<Scripts>
@@ -473,9 +433,7 @@
 			<Button name="$parent_Freeze" inherits="GMGenie_Button" text="(Un)freeze">
 				<Anchors>
 					<Anchor point="BOTTOMLEFT">
-						<Offset>
-							<AbsDimension x="115" y="5" />
-						</Offset>
+						<Offset x="128" y="5" />
 					</Anchor>
 				</Anchors>
 				<Scripts>
@@ -506,9 +464,7 @@
 			<Button name="$parent_Appear" inherits="GMGenie_Button" text="App/Sum">
 				<Anchors>
 					<Anchor point="BOTTOMLEFT">
-						<Offset>
-							<AbsDimension x="170" y="5" />
-						</Offset>
+						<Offset x="184" y="5" />
 					</Anchor>
 				</Anchors>
 				<Scripts>
@@ -534,6 +490,38 @@
 					<OnLeave>
 						                        GameTooltip:Hide();
 					</OnLeave>
+				</Scripts>
+			</Button>
+			<Button name="$parent_Advanced" inherits="GMGenie_Dropdown" text="Advanced tools">
+				<Size>
+					<AbsDimension x="111" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset x="-17" y="30" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						                        ToggleDropDownMenu(1, nil, GMGenie_Spy_InfoWindow_DropdownbuttonsTwo,
+						                        GMGenie_Spy_InfoWindow_Advanced, 0, 0);
+					</OnClick>
+				</Scripts>
+			</Button>
+			<Button name="$parent_Macros" inherits="GMGenie_Dropdown" text="Macros">
+				<Size>
+					<AbsDimension x="109" y="18" />
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOMLEFT">
+						<Offset x="19" y="30" />
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						                        ToggleDropDownMenu(1, nil, GMGenie_Spy_InfoWindow_DropdownbuttonsOne,
+						                        GMGenie_Spy_InfoWindow_Macros, 0, 0);
+					</OnClick>
 				</Scripts>
 			</Button>
 		</Frames>
