@@ -10,7 +10,7 @@
 			<Frame>
 				<Size x="114" y="36" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-16" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_MasterHelper_Main" relativePoint="TOPLEFT" x="3" y="-18" />
 				</Anchors>
 				<Backdrop bgFile="" edgeFile="" />
 				<Layers>
@@ -18,7 +18,7 @@
 						<FontString inherits="GenieFontNormalSmall" text="Enter Amount">
 							<Size x="80" y="12" />
 							<Anchors>
-								<Anchor point="TOPLEFT" x="19" y="-4" />
+								<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="19" y="-20" />
 							</Anchors>
 						</FontString>
 					</Layer>
@@ -27,15 +27,28 @@
 					<EditBox name="GemsAmmount" inherits="GMGenie_Input_Text" enableMouse="true">
 						<Size x="80" y="17" />
 						<Anchors>
-							<Anchor point="TOPLEFT" x="19" y="-19" />
+							<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="19" y="-35" />
 						</Anchors>
+						<Scripts>
+							<OnTextChanged>
+								if self:GetText():match("%D") then
+									self:SetText(self:GetText():gsub("%D", ""))
+									self:SetCursorPosition(#self:GetText())
+								end
+							</OnTextChanged>
+							<OnChar>
+								if not arg1:match("%d") then
+									self:ClearFocus()
+								end
+							</OnChar>
+						</Scripts>
 					</EditBox>
 				</Frames>
 			</Frame>
 			<Button name="Gstrength" inherits="GMGenie_Button" text="+60 Strength">
 				<Size x="114" y="16" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-58" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="3" y="-58" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -49,7 +62,7 @@
 			<Button name="60attackpower" inherits="GMGenie_Button" text="+60 Attack Power">
 				<Size x="114" y="16" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-76" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="3" y="-76" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -63,7 +76,7 @@
 			<Button name="60agility" inherits="GMGenie_Button" text="+60 Agility">
 				<Size x="114" y="16" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-94" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="3" y="-94" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -77,7 +90,7 @@
 			<Button name="70SpellPower" inherits="GMGenie_Button" text="+70 Spell Power">
 				<Size x="114" y="16" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-112" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="3" y="-112" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -91,7 +104,7 @@
 			<Button name="90stamina" inherits="GMGenie_Button" text="+90 Stamina">
 				<Size x="114" y="16" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-130" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="3" y="-130" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -105,7 +118,7 @@
 			<Button name="60resilience" inherits="GMGenie_Button" text="+60 Resilience">
 				<Size x="114" y="16" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-148" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="3" y="-148" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -119,7 +132,7 @@
 			<Button name="25hasterating" inherits="GMGenie_Button" text="+25 Haste Rating">
 				<Size x="114" y="16" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-166" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="3" y="-166" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -133,7 +146,7 @@
 			<Button name="60hitrating" inherits="GMGenie_Button" text="+60 Hit Rating">
 				<Size x="114" y="16" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-184" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="3" y="-184" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -147,7 +160,7 @@
 			<Button name="deletedallgems" inherits="GMGenie_Button" text="DELETED ALL GEMS">
 				<Size x="114" y="16" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-258" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="3" y="-258" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -158,7 +171,7 @@
 			<Button name="60criticalstrike" inherits="GMGenie_Button" text="+60 Critical Strike">
 				<Size x="114" y="16" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-202" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="3" y="-202" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -169,10 +182,10 @@
 					<Color r="1" g="1" b="0" />
 				</ButtonText>
 			</Button>
-			<Button name="20hast40sta" inherits="GMGenie_Button" text="+20Haste +40stamina">
+			<Button name="20hast40sta" inherits="GMGenie_Button" text="+20Has+40stam">
 				<Size x="114" y="16" />
 				<Anchors>
-					<Anchor point="TOPLEFT" x="3" y="-220" />
+					<Anchor point="TOPLEFT" relativeTo="GMGenie_Gems_Main" x="3" y="-220" />
 				</Anchors>
 				<Scripts>
 					<OnClick>
@@ -190,7 +203,7 @@
 			</OnLoad>
 			<OnDoubleClick>
 				self:ClearAllPoints();
-				self:SetPoint("LEFT");
+				self:SetPoint("LEFT", GMGenie_MasterHelper_Main, "RIGHT");
 			</OnDoubleClick>
 			<OnClick>
 			</OnClick>

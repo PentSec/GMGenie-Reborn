@@ -86,6 +86,44 @@ function RemoveBuffs()
     end
 end
 
+-- COMMANDS lookup
+local function LookupCommand(command, query)
+    SendChatMessage(".lookup " .. command .. " " .. query, "GUILD");
+end
+
+local commands = {
+    ls = "spell",
+    lc = "creature",
+    li = "item",
+    lo = "object",
+    lm = "map",
+    lt = "tele"
+};
+
+SLASH_LS1 = "/ls";
+SLASH_LC1 = "/lc";
+SLASH_LI1 = "/li";
+SLASH_LO1 = "/lo";
+SLASH_LM1 = "/lm";
+SLASH_LT1 = "/lt";
+
+local function HandleLookupCommand(commandKey, msg)
+    local query = msg:match("^%s*(.-)%s*$");
+    local command = commands[commandKey];
+    if command and query and query ~= "" then
+        LookupCommand(command, query);
+    else
+        DEFAULT_CHAT_FRAME:AddMessage("Uso: /" .. commandKey .. " [query]", 1.0, 0.5, 0.0);
+    end
+end
+
+SlashCmdList["LS"] = function(msg) HandleLookupCommand("Lookup Spell", msg) end;
+SlashCmdList["LC"] = function(msg) HandleLookupCommand("Lookup Creature", msg) end;
+SlashCmdList["LI"] = function(msg) HandleLookupCommand("Lookup Item", msg) end;
+SlashCmdList["LO"] = function(msg) HandleLookupCommand("Lookup Object", msg) end;
+SlashCmdList["LM"] = function(msg) HandleLookupCommand("Lookup Map", msg) end;
+SlashCmdList["LT"] = function(msg) HandleLookupCommand("Lookup tele", msg) end;
+
 function GMGenie.MasterHelper.toggle()
     local frame = GMGenie_MasterHelper_Main;
     if frame:IsVisible() then
